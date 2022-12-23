@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simpleapp-webapp-service
+spec:
+  selector:
+    app: simpleapp-webapp
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+    nodePort: 30013
+  type: NodePort
